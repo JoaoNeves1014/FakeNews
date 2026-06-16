@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detector de Fake News</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <header>
@@ -21,7 +23,7 @@
     </header>
 
     <main class="container">
-        
+
         <section id="detector" class="tab-content active">
             <div class="hero-text">
                 <h2>Descubra a Verdade em Segundos</h2>
@@ -39,10 +41,16 @@
                         <span>Ou envie uma imagem/print da notícia</span>
                     </label>
                     <input type="file" id="image-upload" accept="image/*">
+                    <p id="file-name" style="margin-top:10px;color:#8b95a1;">
+                        Nenhuma imagem selecionada.
+                    </p>
                 </div>
 
                 <button class="btn-verify" id="btn-verify">
                     <i class="fa-solid fa-magnifying-glass"></i> Analisar Notícia
+                </button>
+                <button class="btn-verify" id="btn-clear" style="background:#666;margin-top:10px;">
+                    Limpar
                 </button>
 
                 <div class="result-box placeholder" id="result-box">
@@ -54,7 +62,8 @@
         <section id="fontes" class="tab-content">
             <div class="hero-text">
                 <h2>Jornais e Portais Confiáveis</h2>
-                <p>Consulte sempre veículos de comunicação que prezam pelo jornalismo profissional e checagem de fatos.</p>
+                <p>Consulte sempre veículos de comunicação que prezam pelo jornalismo profissional e checagem de fatos.
+                </p>
             </div>
 
             <div class="grid-links">
@@ -92,7 +101,8 @@
                     <div class="dica-num">01</div>
                     <div class="dica-info">
                         <h3>Verifique a Fonte e a URL</h3>
-                        <p>Muitos sites falsos usam URLs parecidas com as de portais famosos (ex: <i>g1-noticias-fake.com</i>). Olhe o link com atenção.</p>
+                        <p>Muitos sites falsos usam URLs parecidas com as de portais famosos (ex:
+                            <i>g1-noticias-fake.com</i>). Olhe o link com atenção.</p>
                     </div>
                 </div>
 
@@ -100,7 +110,8 @@
                     <div class="dica-num">02</div>
                     <div class="dica-info">
                         <h3>Leia além do Título</h3>
-                        <p>Títulos bombásticos ou alarmistas ("URGENTE!", "COMPARTILHE ANTES QUE APAGUEM") são feitos para gerar emoção e cliques rápidos.</p>
+                        <p>Títulos bombásticos ou alarmistas ("URGENTE!", "COMPARTILHE ANTES QUE APAGUEM") são feitos
+                            para gerar emoção e cliques rápidos.</p>
                     </div>
                 </div>
 
@@ -108,7 +119,8 @@
                     <div class="dica-num">03</div>
                     <div class="dica-info">
                         <h3>Pesquise em outros veículos</h3>
-                        <p>Se a notícia for real e importante, ela estará sendo coberta por vários jornais de credibilidade ao mesmo tempo. Se só um site desconhecido fala disso, desconfie.</p>
+                        <p>Se a notícia for real e importante, ela estará sendo coberta por vários jornais de
+                            credibilidade ao mesmo tempo. Se só um site desconhecido fala disso, desconfie.</p>
                     </div>
                 </div>
 
@@ -116,7 +128,8 @@
                     <div class="dica-num">04</div>
                     <div class="dica-info">
                         <h3>Cuidado com imagens e áudios antigos</h3>
-                        <p>É muito comum tirarem um vídeo ou foto real de contexto (de anos atrás) e dizerem que está acontecendo hoje.</p>
+                        <p>É muito comum tirarem um vídeo ou foto real de contexto (de anos atrás) e dizerem que está
+                            acontecendo hoje.</p>
                     </div>
                 </div>
             </div>
@@ -128,24 +141,9 @@
         <p>&copy; 2026 VerificAI. Combate à desinformação.</p>
     </footer>
 
-    <script>
-        const buttons = document.querySelectorAll('.nav-btn');
-        const tabs = document.querySelectorAll('.tab-content');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove classe ativa de todos os botões e abas
-                buttons.forEach(btn => btn.classList.remove('active'));
-                tabs.forEach(tab => tab.classList.remove('active'));
-
-                // Ativa o botão clicado e a aba correspondente
-                button.classList.add('active');
-                const targetTab = button.getAttribute('data-tab');
-                document.getElementById(targetTab).classList.add('active');
-            });
-        });
-    </script>
+    <script src="../JavaScript/index.js"></script>
 </body>
+
 </html>
 </body>
 
